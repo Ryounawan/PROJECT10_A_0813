@@ -327,7 +327,7 @@ export default {
 
   created() {
     // tambahkan fungsi untuk retrieve data
-    onValue(ref(db, "merchandises"), (snapshot) => {
+    onValue(ref(db, 'merchandises'), (snapshot) => {
       (this.merchandise = []),
         snapshot.forEach((merchandise) => {
           this.merchandise.push({
