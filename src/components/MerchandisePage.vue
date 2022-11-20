@@ -328,7 +328,7 @@ export default {
   created() {
     // tambahkan fungsi untuk retrieve data
     onValue(ref(db, 'merchandises'), (snapshot) => {
-      (this.merchandise = []),
+      this.merchandise = [],
         snapshot.forEach((merchandise) => {
           this.merchandise.push({
             id: merchandise.key,
@@ -336,7 +336,7 @@ export default {
             artist: merchandise.val().artist,
             price: merchandise.val().price,
             stock: merchandise.val().stock,
-            package: merchandise.val().package,
+            package: merchandise.val().package
           });
         });
     });
@@ -372,7 +372,7 @@ export default {
             this.closeDialog();
           });
       }
-    },
+    }
 
     editData(item) {
       this.dialog = true;
